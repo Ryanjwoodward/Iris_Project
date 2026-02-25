@@ -26,8 +26,9 @@ jobs:
           pip install pandas scikit-learn
           pip install seaborn
 
-      - name: Print Test message
-        run: echo "We will had unit tests here..."
+      - name: Run Unit Tests
+        run: |
+          python -m unittest discover -s . -p "*.py"
 
   deploy:
     runs-on: ubuntu-latest
